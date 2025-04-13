@@ -1,4 +1,4 @@
-# Retail Sales Analysis SQL Project
+# 🛒 Retail Sales Analysis – SQL Project
 
 ## Project Overview
 
@@ -6,14 +6,35 @@
 
 This project is designed to demonstrate SQL skills and techniques typically used by data analysts to explore, clean, and analyze retail sales data. The project involves setting up a retail sales database, performing exploratory data analysis (EDA), and answering specific business questions through SQL queries. This project is ideal for those who are starting their journey in data analysis and want to build a solid foundation in SQL.
 
-## Objectives
+##📌 Objectives
 
-1. **Set up a retail sales database**: Create and populate a retail sales database with the provided sales data.
-2. **Data Cleaning**: Identify and remove any records with missing or null values.
-3. **Exploratory Data Analysis (EDA)**: Perform basic exploratory data analysis to understand the dataset.
-4. **Business Analysis**: Use SQL to answer specific business questions and derive insights from the sales data.
+1. **🏗️Set up a retail sales database**: Create and populate a retail sales database with the provided sales data.
+2. **🧹Data Cleaning**: Identify and remove any records with missing or null values.
+3. **🔍Exploratory Data Analysis (EDA)**: Perform basic exploratory data analysis to understand the dataset.
+4. **📊Business Analysis**: Use SQL to answer specific business questions and derive insights from the sales data.
 
 ## Project Structure
+🗃️ Database Schema
+Database: sql_p1_retail_db
+Table: retail_sales
+
+## 📋 Columns Description
+
+```
+| Column Name       | Data Type   | Description                                                                |
+|-------------------|-------------|----------------------------------------------------------------------------|
+| transactions_id   | INT         | Unique ID for each transaction (Primary Key)                              |
+| sale_date         | DATE        | The date when the sale occurred                                           |
+| sale_time         | TIME        | The time of the sale                                                      |
+| customer_id       | INT         | Unique identifier of the customer                                         |
+| gender            | VARCHAR(15) | Gender of the customer (e.g., Male, Female)                               |
+| age               | INT         | Age of the customer                                                       |
+| category          | VARCHAR(25) | Product category (e.g., Clothing, Electronics, Beauty)                    |
+| quantity          | INT         | Number of units sold in the transaction                                   |
+| price_per_unit    | FLOAT       | Price of a single unit of the product                                     |
+| cogs              | FLOAT       | Cost of Goods Sold (cost to the business for that transaction)            |
+| total_sale        | FLOAT       | Total revenue from the transaction (typically: quantity × price_per_unit) |
+```
 
 ### 1. Database Setup
 
@@ -184,7 +205,7 @@ FROM hourly_sale
 GROUP BY shift
 ```
 
-## Findings
+##🔍 Findings
 
 - **Customer Demographics**: The dataset includes customers from various age groups, with sales distributed across different categories such as Clothing and Beauty.
 - **High-Value Transactions**: Several transactions had a total sale amount greater than 1000, indicating premium purchases.
@@ -197,11 +218,11 @@ GROUP BY shift
 - **Trend Analysis**: Insights into sales trends across different months and shifts.
 - **Customer Insights**: Reports on top customers and unique customer counts per category.
 
-## Conclusion
+##✅ Conclusion
 
 This project serves as a comprehensive introduction to SQL for data analysts, covering database setup, data cleaning, exploratory data analysis, and business-driven SQL queries. The findings from this project can help drive business decisions by understanding sales patterns, customer behavior, and product performance.
 
-## How to Use
+##📁 How to Use
 
 1. **Clone the Repository**: Clone this project repository from GitHub.
 2. **Set Up the Database**: Run the SQL scripts provided in the `database_setup.sql` file to create and populate the database.
